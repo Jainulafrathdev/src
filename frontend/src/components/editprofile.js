@@ -36,7 +36,7 @@ const EditProfile = () => {
                     pincode: userData.pincode || ''
                 });
                 setProfilePicture(userData.profilePicture || '');
-                setProfilePreview(`http://localhost:5000/${userData.profilePicture}`);
+                setProfilePreview(`http://54.174.221.90:5000/${userData.profilePicture}`);
             }
         };
         fetchUserData();
@@ -48,7 +48,7 @@ const EditProfile = () => {
 
     const handleCancelClick = () => {
         setIsEditing(false);
-        setProfilePreview(`http://localhost:5000/${user.profilePicture}`);
+        setProfilePreview(`http://54.174.221.90:5000/${user.profilePicture}`);
     };
 
     const handleChange = (e) => {
@@ -77,7 +77,7 @@ const EditProfile = () => {
         setIsEditing(false);
         const updatedUserData = await getUserData(email);
         setUser(updatedUserData);
-        setProfilePreview(`http://localhost:5000/${updatedUserData.profilePicture}`);
+        setProfilePreview(`http://54.174.221.90:5000/${updatedUserData.profilePicture}`);
     };
 
     return (

@@ -166,7 +166,7 @@ const Dashboard = ({ addToPortfolio, addToWatchlist }) => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/portfolio', {
+      await axios.post('http://54.174.221.90:5000/api/portfolio', {
         userId: user.email,
         symbol: stock.symbol,
         price: stock.price,
@@ -197,7 +197,7 @@ const Dashboard = ({ addToPortfolio, addToWatchlist }) => {
     }
   
     try {
-      await axios.post('http://localhost:5000/api/watchlist', {
+      await axios.post('http://54.174.221.90:5000/api/watchlist', {
         userId: user.email,
         symbol: stock.symbol,
         price: stock.price,

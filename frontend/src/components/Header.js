@@ -50,7 +50,7 @@ const Header = () => {
           </button>
         </div>
         <div className="user-icon" onClick={toggleDropdown}>
-          <img src={`http://localhost:5000/${user.profilePicture}`} alt="Profile" className="profile-pic" /> {/* Profile Picture */}
+          <img src={`http://54.174.221.90:5000/${user.profilePicture}`} alt="Profile" className="profile-pic" /> {/* Profile Picture */}
           <div className='user-info'>
           <p>{user.name}</p>
           </div>

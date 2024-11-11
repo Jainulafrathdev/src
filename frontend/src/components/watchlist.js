@@ -12,7 +12,7 @@ export default function Watchlist() {
     const fetchWatchlist = async () => {
       if (!email) return;
       try {
-        const response = await axios.get('http://localhost:5000/api/watchlist', {
+        const response = await axios.get('http://54.174.221.90:5000/api/watchlist', {
           params: { userId: email }
         });
         setWatchlist(response.data);
@@ -30,7 +30,7 @@ export default function Watchlist() {
     }
     
     try {
-      await axios.delete(`http://localhost:5000/api/watchlist/${symbol}`, {
+      await axios.delete(`http://54.174.221.90:5000/api/watchlist/${symbol}`, {
         params: { userId: email }
       });
       
