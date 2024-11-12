@@ -97,7 +97,7 @@ const Dashboard = ({ addToPortfolio, addToWatchlist }) => {
     setLoading(true);
     setError(null);
     try {
-      const API_KEY = '670cbdcb5d6a98.28595369';
+      const API_KEY = '6715bfb20a2446.06319934';
       const response = await axios.get(
         `https://eodhistoricaldata.com/api/real-time/${symbol}.NSE?api_token=${API_KEY}&fmt=json`
       );
@@ -166,7 +166,7 @@ const Dashboard = ({ addToPortfolio, addToWatchlist }) => {
     }
 
     try {
-      await axios.post('http://54.174.221.90:5000/api/portfolio', {
+      await axios.post('http://18.212.250.251:5000/api/portfolio', {
         userId: user.email,
         symbol: stock.symbol,
         price: stock.price,
@@ -197,7 +197,7 @@ const Dashboard = ({ addToPortfolio, addToWatchlist }) => {
     }
   
     try {
-      await axios.post('http://54.174.221.90:5000/api/watchlist', {
+      await axios.post('http://18.212.250.251:5000/api/watchlist', {
         userId: user.email,
         symbol: stock.symbol,
         price: stock.price,
@@ -261,12 +261,12 @@ const Dashboard = ({ addToPortfolio, addToWatchlist }) => {
               </tr>
             </thead>
             <tbody>
-              <tr onClick={handleNavigateToStockDetails}>
-                <td className="stock-symbol">{stock.symbol}</td>
-                <td className="stock-price">₹{stock.price}</td>
-                <td className="stock-change">{stock.change}</td>
-                <td className="stock-change-percent">{stock.changePercent}</td>
-                <td className="last-updated">{stock.lastUpdated}</td>
+              <tr >
+                <td onClick={()=>{handleNavigateToStockDetails(stock.symbol,stock.name)}} className="stock-symbol">{stock.symbol}</td>
+                <td onClick={()=>{handleNavigateToStockDetails(stock.symbol,stock.name)}} className="stock-price">₹{stock.price}</td>
+                <td onClick={()=>{handleNavigateToStockDetails(stock.symbol,stock.name)}} className="stock-change">{stock.change}</td>
+                <td onClick={()=>{handleNavigateToStockDetails(stock.symbol,stock.name)}} className="stock-change-percent">{stock.changePercent}</td>
+                <td onClick={()=>{handleNavigateToStockDetails(stock.symbol,stock.name)}} className="last-updated">{stock.lastUpdated}</td>
                 <td className="icon-cell">
                   {isAddedToPortfolio ? (
                     <i className="fa-solid fa-check" style={{ color: 'green' }}></i>

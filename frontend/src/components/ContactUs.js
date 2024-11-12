@@ -17,7 +17,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://54.174.221.90:5000/api/auth/contact-us', {
+      const response = await fetch('http://18.212.250.251:5000/api/auth/contact-us', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
